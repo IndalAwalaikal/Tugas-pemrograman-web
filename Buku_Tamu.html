@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Buku Tamu</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            background-image: url('https://www.transparenttextures.com/patterns/bedge-grunge.png'); /* Add pattern */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .guest-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #444;
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .gender, .social-media {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .submit {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .submit:hover {
+            background-color: #218838;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .cancel {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .cancel:hover {
+            background-color: #c82333;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-align: center;
+            display: block;
+            color: #4CAF50;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #7c4dff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(124, 77, 255, 0.5);
+        }
+
+        @media (max-width: 600px) {
+            .guest-form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="#" class="guest-form">
+            <h2>Form Buku Tamu</h2>
+
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" placeholder="Your name" required>
+
+            <label>Jenis Kelamin:</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Laki-laki"> Laki-laki</label>
+                <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+            </div>
+
+            <label for="alamat">Alamat Tinggal:</label>
+            <input type="text" id="alamat" name="alamat" placeholder="Your address" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="ex: myname@example.com" required>
+
+            <label>Aktif Pada Sosial Media:</label>
+            <div class="social-media">
+                <label><input type="checkbox" name="social" value="Facebook"> Facebook</label>
+                <label><input type="checkbox" name="social" value="Twitter"> Twitter</label>
+                <label><input type="checkbox" name="social" value="Instagram"> Instagram</label>
+                <label><input type="checkbox" name="social" value="Path"> Path</label>
+            </div>
+
+            <label for="source">Mengetahui Web Ini dari:</label>
+            <select id="source" name="source">
+                <option value="">-- Pilih --</option>
+                <option value="teman">Teman</option>
+                <option value="iklan">Iklan</option>
+                <option value="media">Media Sosial</option>
+            </select>
+
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" placeholder="Type here..." required></textarea>
+
+            <div class="button-container">
+                <button type="submit" class="btn submit">Kirim</button>
+                <button type="reset" class="btn cancel">Batal</button>
+            </div>
+        </form>
+
+        <a href="About.html">Tentang Kami</a>
+    </div>
+</body>
+</html>
